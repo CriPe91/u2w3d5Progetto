@@ -61,6 +61,14 @@ const handleDelete = () => {
   }
 };
 
+const handleReset = () => {
+  const hasConfirmed = confirm("sei sicuro di voler resettare il form?");
+  const form = document.getElementById("form-product");
+  if (hasConfirmed) {
+    form.reset();
+  }
+};
+
 window.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form-product");
   form.onsubmit = handleSubmit;
@@ -68,11 +76,15 @@ window.addEventListener("DOMContentLoaded", function () {
   const submitBtn = document.getElementById("submitBtn");
   const deleteBtn = document.getElementById("deleteBtn");
   const subtitle = document.getElementById("subtitle");
+  const resetBtn = document.getElementById("resetBtn");
 
   if (id) {
     subtitle.innerText = "-- Modifica Risorsa";
     submitBtn.classList.add("btn-primary");
     submitBtn.innerText = "Modifica";
+
+    resetBtn.classList.remove("d-none");
+    resetBtn.onclick = handleReset;
 
     deleteBtn.classList.remove("d-none");
     deleteBtn.onclick = handleDelete;
