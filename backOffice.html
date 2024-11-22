@@ -44,8 +44,8 @@
       <div class="row justify-content-center">
         <div class="col-md-10 col-xl-7">
           <h1 class="display-4 my-4 d-inline-block">Backoffice</h1>
-
-          <form>
+          <h4 id="subtitle" class="display-6 d-inline-block"></h4>
+          <form id="form-product">
             <div class="mb-3">
               <label for="name" class="form-label">Inserisci nome del prodotto</label>
               <input type="text" class="form-control" id="name" placeholder="Nome prodotto" required />
@@ -56,13 +56,13 @@
             </div>
 
             <div class="mb-3">
-              <label for="name" class="form-label">Brand</label>
-              <input type="text" class="form-control" id="name" placeholder="Inserisci Brand" required />
+              <label for="brand" class="form-label">Brand</label>
+              <input type="text" class="form-control" id="brand" placeholder="Inserisci Brand" required />
             </div>
 
             <div class="mb-3">
-              <label for="name" class="form-label">Image Url</label>
-              <input type="text" class="form-control" id="imgUrl" placeholder="Inserisci URL immagine" required />
+              <label for="imageUrl" class="form-label">Image Url</label>
+              <input type="text" class="form-control" id="imageUrl" placeholder="Inserisci URL immagine" required />
             </div>
 
             <div class="mb-3">
@@ -70,7 +70,8 @@
               <input type="number" class="form-control" id="price" placeholder="Inserisci prezzo" />
             </div>
 
-            <button type="submit" class="btn btn-success">Crea</button>
+            <button id="submitBtn" type="submit" class="btn btn-success">Crea</button>
+
             <button id="deleteBtn" type="button" class="btn btn-danger d-none">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                 <path
